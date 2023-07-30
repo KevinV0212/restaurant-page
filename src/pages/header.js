@@ -28,10 +28,23 @@ export default function header() {
     return header;
 }
 
+// function that will set give button with 'id' the class of 'current'
+// will also remove 'current' from all other nav buttons'
 export function setCurrentNavBtn(id)
 {
     const navBtns = document.querySelectorAll('.nav-btn');
     navBtns.forEach(btn => btn.classList.remove('current)'));
     const currentBtn = document.querySelector(`#${id}`);
     currentBtn.classList.add('current');
+}
+
+// function that assigns button with 'id' to call 'page' to render a page
+export function assignRender(id, page){
+    const content = document.querySelector('.content');
+    const btn = document.querySelector(`#${id}`);
+    btn.addEventListener('click', () => {
+        const container = document.querySelector('.container');
+        if (container) content.removeChild(container);
+        content.appendChild(page());
+    });
 }
