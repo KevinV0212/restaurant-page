@@ -43,8 +43,8 @@ export function assignRender(id, page){
     const content = document.querySelector('.content');
     const btn = document.querySelector(`#${id}`);
     btn.addEventListener('click', () => {
-        const container = document.querySelector('.container');
-        if (container) content.removeChild(container);
+        const mainContent = document.querySelector('.main-content');
+        if (mainContent) content.removeChild(mainContent);
         content.appendChild(page());
     });
 }
