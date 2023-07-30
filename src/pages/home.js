@@ -11,6 +11,7 @@ export default function home() {
     foodImg.src = Food; 
     mainContent.appendChild(foodImg);
     
+    // setting text content
     const summary = document.createElement('p');
     summary.textContent = 
         'Founded in 1996, Murder King started as a local '+

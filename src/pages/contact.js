@@ -3,8 +3,10 @@ export default function contact() {
     mainContent.classList.add('main-content');
     
     const title = document.createElement('h1');
-    title.classList.add('')
-    return mainContent;
+    title.classList.add('title');
+    title.innerText = ('Contact');
+    mainContent.append(title);
 
-    return container;
+
+    return mainContent;
 }

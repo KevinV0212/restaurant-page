@@ -2,6 +2,7 @@ import Steve from '../img/steve.jpg';
 import Donna from '../img/donna.jpg';
 import Marco from '../img/marco.jpg';
 
+// factory function for a menuItem
 const menuItem = (name, imgSrc, desc, price) => {
     const photo = new Image();
     photo.src = imgSrc;
@@ -12,7 +13,12 @@ export default function menu() {
     const mainContent = document.createElement('div');
     mainContent.classList.add('main-content');
 
-    // array of menu item objects
+    const title = document.createElement('h1');
+    title.classList.add('title');
+    title.innerText = ('Menu');
+    mainContent.append(title);
+
+    // manually adding menu items
     const items = [
         menuItem(
             'The Steve', Steve,
@@ -45,10 +51,10 @@ export default function menu() {
             '$1337'
         ),
     ]
-    // adding menuItem object data onto page
     const menu = document.createElement('div');
     menu.classList.add('menu');
 
+    // render each item object
     items.forEach(item => {
         const entry = document.createElement('div');
         const name = document.createElement('h2');
@@ -73,8 +79,6 @@ export default function menu() {
     })
 
     mainContent.appendChild(menu);
-
-    
     
     return mainContent;
 }
