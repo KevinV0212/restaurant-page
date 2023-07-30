@@ -1,5 +1,11 @@
-const menuItem = (name, desc, price) => {
-    return {name, desc, price}
+import Steve from '../img/steve.jpg';
+import Donna from '../img/donna.jpg';
+import Marco from '../img/marco.jpg';
+
+const menuItem = (name, imgSrc, desc, price) => {
+    const photo = new Image();
+    photo.src = imgSrc;
+    return {name, photo, desc, price}
 }
 
 export default function menu() {
@@ -9,7 +15,7 @@ export default function menu() {
     // array of menu item objects
     const items = [
         menuItem(
-            'The Steve',
+            'The Steve', Steve,
 
             'Sourced from the finest surburb in Wisconsin, the Steve ' +
             'is a well aged cut that loved playing golf on the weekends ' +
@@ -18,7 +24,7 @@ export default function menu() {
             '$777'
         ),
         menuItem(
-            'The Donna',
+            'The Donna', Donna,
 
             'Sourced from the lovely town of New Orleans, ' + 
             'the Donna is fried with a light and crispy beer batter' +
@@ -28,7 +34,7 @@ export default function menu() {
             '$1234'
         ),
         menuItem(
-            'The Marco',
+            'The Marco', Marco,
 
             'Sourced from the warm region of Southern texas, ' + 
             'the Marco is smoked low and slow over a bed of hickory wood chips'+
@@ -59,6 +65,7 @@ export default function menu() {
         price.textContent = item.price;
 
         entry.appendChild(name);
+        entry.appendChild(item.photo)
         entry.appendChild(desc);
         entry.appendChild(price);
     
