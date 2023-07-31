@@ -5,6 +5,7 @@ import home from './pages/home.js'
 import menu from './pages/menu.js'
 import contact from './pages/contact.js'
 
+import './style.css';
 console.log('connected');
 
 const content = document.querySelector('.content');

@@ -12,6 +12,9 @@ export default function home() {
     mainContent.appendChild(foodImg);
     
     // setting text content
+    const info = document.createElement('div');
+    info.classList.add('info');
+
     const summary = document.createElement('p');
     summary.textContent = 
         'Founded in 1996, Murder King started as a local '+
@@ -19,12 +22,14 @@ export default function home() {
         'Ever since then, Murder King has become an local hotspot '+
         'which has nothing to do with the with the increasing number of '+
         'disappearances in the area';
-    mainContent.appendChild(summary);
+    info.appendChild(summary);
     
     const schedule = document.createElement('div');
     schedule.classList.add('schedule');
     schedule.textContent = 'Every day from 1am to 4am';
-    mainContent.appendChild(schedule);
+    info.appendChild(schedule);
+
+    mainContent.appendChild(info);
 
     return mainContent;
 }

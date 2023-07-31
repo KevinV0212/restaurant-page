@@ -21,10 +21,10 @@ export default function contact() {
     form.appendChild(formSubject);
     
     const formDesc = document.createElement('div');
-    formDesc.classList = 'formDesc';
+    formDesc.classList = 'form-section';
 
     const descLabel = '<label for="desc-content"> Description </label>'
-    const descContent= '<textarea id="desc-content" name="desc-content" placeholder="Enter Descrption here"></textarea>';
+    const descContent = '<textarea id="desc-content" name="desc-content" placeholder="Enter Description here"></textarea>';
     formDesc.innerHTML = (
         `${descLabel}${descContent}`
     );
