@@ -6,6 +6,7 @@ import menu from './pages/menu.js'
 import contact from './pages/contact.js'
 
 import './style.css';
+import '../node_modules/@mdi/font/css/materialdesignicons.css'
 console.log('connected');
 
 const content = document.querySelector('.content');

@@ -11,17 +11,17 @@ export default function header() {
     const homeBtn = document.createElement('button');
     homeBtn.setAttribute('id', 'home-btn');
     homeBtn.classList.add('nav-btn');
-    homeBtn.textContent = 'Home';
+    homeBtn.innerHTML = '</span>Home</span><span class="mdi mdi-home-circle-outline">';
     navBar.appendChild(homeBtn);
     const menuBtn = document.createElement('button');
     menuBtn.setAttribute('id', 'menu-btn');
     menuBtn.classList.add('nav-btn');
-    menuBtn.textContent = 'Menu';
+    menuBtn.innerHTML = '<span>Menu</span><span class="mdi mdi-silverware"></span>';
     navBar.appendChild(menuBtn);
     const contactBtn = document.createElement('button');
     contactBtn.setAttribute('id', 'contact-btn');
     contactBtn.classList.add('nav-btn');
-    contactBtn.textContent = 'Contact';
+    contactBtn.innerHTML = '<span>Contact</span><span class="mdi mdi-email"></span>';
     navBar.appendChild(contactBtn);
    
     header.appendChild(navBar);
