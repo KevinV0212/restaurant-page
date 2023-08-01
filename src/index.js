@@ -11,9 +11,11 @@ console.log('connected');
 
 const content = document.querySelector('.content');
 content.appendChild(header());
+
 // assigning each page to a nav button
 assignRender('home-btn',  home)
 assignRender('menu-btn', menu);
 assignRender('contact-btn', contact);
-content.appendChild(home());
+
+content.appendChild(menu());
 
