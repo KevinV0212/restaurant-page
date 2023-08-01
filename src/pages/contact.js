@@ -14,7 +14,7 @@ export default function contact() {
     formSubject.classList = 'form-section';
 
     const subjectLabel = '<label for="subject"> Subject </label>'
-    const subjectInput = '<input type="text" id="subject" name="subject" placeholder="subject"></input>' 
+    const subjectInput = '<input type="text" id="subject" name="subject" placeholder="subject" required></input>';
     formSubject.innerHTML = (
         `${subjectLabel}${subjectInput}`
     )
@@ -24,12 +24,17 @@ export default function contact() {
     formDesc.classList = 'form-section';
 
     const descLabel = '<label for="desc-content"> Description </label>'
-    const descContent = '<textarea id="desc-content" name="desc-content" placeholder="Enter Description here"></textarea>';
+    const descContent = '<textarea id="desc-content" name="desc-content" placeholder="Enter Description here" required></textarea>';
     formDesc.innerHTML = (
         `${descLabel}${descContent}`
     );
     form.appendChild(formDesc);
 
+    const submitBtn = document.createElement('button');
+    submitBtn.setAttribute('type', 'submit');
+    submitBtn.classList.add('submit-btn');
+    submitBtn.textContent = 'submit';
+    form.appendChild(submitBtn);
     // const form = document.createElement('div');
     // const 
     // formText.classList = 'form-section';

@@ -7,6 +7,8 @@ import contact from './pages/contact.js'
 
 import './style.css';
 import '../node_modules/@mdi/font/css/materialdesignicons.css'
+
+import '.'
 console.log('connected');
 
 const content = document.querySelector('.content');
@@ -17,5 +19,5 @@ assignRender('home-btn',  home)
 assignRender('menu-btn', menu);
 assignRender('contact-btn', contact);
 
-content.appendChild(menu());
+content.appendChild(contact());
 
