@@ -19,5 +19,5 @@ assignRender('home-btn',  home)
 assignRender('menu-btn', menu);
 assignRender('contact-btn', contact);
 
-content.appendChild(contact());
+content.appendChild(home());
 
